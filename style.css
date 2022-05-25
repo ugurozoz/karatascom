@@ -181,6 +181,7 @@ nav{
   z-index: 30;
   padding: 15px 15px;
   background-color:rgba(255, 255, 255, 0.8);
+  box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.2);
   
 }
 
@@ -221,9 +222,10 @@ section.content {
   height: 100vh;
   width: 400vw;
   display: flex;
-  animation-duration: 12s;
+  animation-duration: 21s;
   animation-name: slidein;
   animation-iteration-count: infinite;
+  animation-delay: 4s;
 }
 
 .slide {
@@ -340,27 +342,103 @@ footer a {
 /*SERVICES*/
 
 .container.page-services header{
+  
+
+}
+
+.container.page-services .content{
+  padding-top: 140px;
+  height: calc(100vh);
+  box-sizing: border-box;
   background: url('images/drawings.jpg') center center no-repeat;
   background-size: cover;
 
 }
 
-.container.page-services .content{
-  top: 140px;
-  height: calc(100vh - 140px);
+.content-inner{
+  background-color: rgba(255, 255, 255, 0.95);
+  height: calc(100vh - 140px); 
+  overflow: hidden;
+  background:url('images/design.jpeg') right center no-repeat rgba(255, 255, 255, 0.95);
+  background-size: 800px auto;
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .content-inner{
+   
+    background:rgba(255, 255, 255, 0.95);
+    
+  }
+  
 
 }
 
+.content-inner:before{
+  content: "";
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: url('images/drawings.jpg') center center no-repeat;
+  background-size: cover;
+  filter: blur(30px);
+  z-index: 0;
+  opacity: 0.2;
+  display: none;
+}
+
+.content-inner > div {
+  position: relative;
+  z-index: 5;
+  color: #666;
+}
+
+.content-inner > div > h1 {
+  color: #333;
+}
+
+.content-inner > div.services > p  {
+  margin-top: 10px;
+
+}
+
+
+
+.content-inner > div > ul > li {
+  line-height: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 960px) {
   .container.page-services .content{
-    top: 190px;
-    height: calc(100vh - 190px);  
+    padding-top: 190px;
+    height: calc(100vh); 
   }
 
 }
 
 .services,.fyk {
-  padding: 40px;
+  padding: 60px 60px 0 60px;
 }
 
 .services p {
@@ -374,6 +452,31 @@ footer a {
 }
 
 
+/*CONTACT*/
+.contact-info {
+  padding: 60px;
+  font-size: 20px;
+  width:400px;
+  max-width: 100%;
+  line-height: 1.3em;
+}
+
+.contact-info * {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+  line-height: 1.3em;
+}
+
+.contact-info h1 {
+  font-size: 24px;
+}
+
+.container.page-services.page-contact .content-inner {
+  background:rgba(255, 255, 255, 0.95);
+}
+
+
 /*ANIMATIONS*/
 
 
@@ -382,27 +485,27 @@ footer a {
     margin-left:0%;    
   }
 
-  8.3% {    
+  4% {    
     margin-left:-100%;
     
   }
 
-  33.2% {    
+  32% {    
     margin-left:-100%;
     
   }
 
-  41.5% {    
+  36% {    
     margin-left:-200%;
     
   }
 
-  66.4% {    
+  64% {    
     margin-left:-200%;
     
   }
 
-  74.7% {    
+  68%{    
     margin-left:-300%;
     
   }
