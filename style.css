@@ -302,17 +302,38 @@ section.content {
 
 .slide-2{
   background: url('images/enjoyment.jpeg') center center no-repeat;
-  background-size: cover;
- 
+  background-size: cover; 
 }
 
 .slide-2 span {color: #fff;}
 
 .slide-3{
-  background: url('images/drawings.jpg') center center no-repeat;
-  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
 }
+
+.slide.slide-3 div.slide-custom{
+  
+  width: 1200px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.slide.slide-3 div.slide-custom em{
+  width: 100%;
+  padding-top: 75%;
+  background: url('images/image.jpg') center center no-repeat;
+  background-size: cover;
+  display: block;
+}
+
+
 
 .slide-3 span {color: #fff;}
 
